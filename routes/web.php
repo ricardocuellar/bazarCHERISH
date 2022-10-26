@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/bazar',[FormController::class, 'index'])->name('index');
+Route::get('/',[FormController::class, 'index'])->name('index');
 Route::post('/bazar/store',[FormController::class, 'store'])->name('store');
