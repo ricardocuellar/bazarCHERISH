@@ -25,7 +25,7 @@ class FormController extends Controller
         $key = env('KLAVIYO_API_KEY',NULL);
         $newList = env('KLAVIYO_API_LIST',NULL);
         $client = new Client();
-        $clientWinner = 50;
+        $clientWinner = 22;
         
         $response = $client->request('POST', 'https://a.klaviyo.com/api/v2/list/'.$newList.'/members?api_key='.$key, [
             'body' => '{"profiles":[{"email":"'.$request->email.'","first_name":"'.$request->name.'","last_name":"'.$request->lastname.'"}]}',
